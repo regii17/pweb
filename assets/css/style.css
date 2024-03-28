@@ -8,10 +8,12 @@ body{
     background-size: 100%;
 } 
 header{
-    background-color: aquamarine;
+    background-color: rgb(255, 255, 255);
     width: 30%;
-    height: 62px;
+    height: 75px;
     float: left;
+    position: fixed;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.925);
 }
 header img{
     float: left;
@@ -20,9 +22,12 @@ header img{
 }
 nav{
     width: 70%;
-    height: 62px;
-    background-color: rgb(129, 196, 255);
+    height: 75px;
+    background-color: rgb(255, 255, 255);
     float: right;
+    position: fixed;
+    margin-left: 405px;
+    box-shadow: 3px 1px 2px 1px rgba(0, 0, 0, 0.925);
 }
 nav i{
     float: right;
@@ -45,22 +50,89 @@ nav img{
     width: 25px;
     height: 25px;
     margin-top: 15px;
+    margin-right: 20px;
 }
 article{
-    background-color: blueviolet;
+    background-color: rgb(233, 233, 233);
     width: 80%;
     height: 600px;
-    float: left;
+    margin-left: 270px;
+    
+}
+article .kotak{
+    width: 280px;
+    height: 160px;
+    border-radius: 10px;
+}
+article .kotak1{
+    background-color: rgb(57, 118, 209);
+    margin-top: 110px;
+    margin-left: 60px;
+}
+article .kotak2{
+    background-color: rgb(177, 190, 53);
+    margin-top: -160px;
+    margin-left: 400px;
+}
+article .kotak3{
+    background-color: rgb(72, 206, 72);
+    margin-top: -160px;
+    margin-left: 740px;
+
+}
+article .bawah{
+    background-color: rgba(0, 0, 0, 0.404);
+    width: 280px;
+    height: 30px;
+    margin-top:11px;
+    border-radius: 0px 0px 10px 10px;
+}
+article .bawah p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: aliceblue;
+}
+article .kotak h2{
+    padding: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+article .kotak p{
+    padding: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: smaller;
 }
 aside{
-    background-color: brown;
+    background-color: rgb(32, 32, 32);
     width: 20%;
     height: 600px;
-    float: left;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.925);
+    margin-top: -524px;
+    position: fixed;
 }
+aside p{
+    margin-left: 50px;
+    margin-top: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: large;
+}
+aside img{
+    width: 10%;
+    height: 10%;
+}
+
 footer{
-    background-color: black;
-    width: 100%;
-    height: auto;
-    
+    background-color: rgb(12, 12, 12);
+    width: 80%;
+    height: 70px;
+    margin-left: 271px;
+    color: rgb(255, 255, 255);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: small;
+}
+footer strong{
+    margin-left: 30px;
+}
+footer .footer-right{
+    float: right;
+    margin-right: 30px;
 }
