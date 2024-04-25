@@ -94,6 +94,11 @@ article .kotak3{
     margin-left: 740px;
 
 }
+article .kotak4{
+    background-color: rgb(170, 0, 9);
+    margin-top: 60px;
+    margin-left: -680px;
+}
 article .bawah{
     margin-top: 16px;
     background-color: rgba(0, 0, 0, 0.404);
