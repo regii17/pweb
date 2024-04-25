@@ -1,0 +1,227 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-size: 100%;
+} 
+nav #logo{
+    float: left;
+    margin-top: -28px;
+    height: 130px;
+    width: auto;
+}
+nav{
+    width: 100%;
+    height: 13%;
+    background-color: rgb(255, 255, 255);
+    float: inline-start;
+    position: fixed;
+    box-shadow: 3px 1px 2px 1px rgba(0, 0, 0, 0.925);
+}
+nav i{
+    float: right;
+}
+nav h3{
+    float: right;
+    padding: 20px 30px;
+}
+nav h1{
+    float: right;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    margin-top: 10px;
+    padding: 8px;
+    
+}
+nav img{
+    float: right;
+    width: 25px;
+    height: 25px;
+    margin-top: 25px;
+    margin-right: 20px;
+}
+nav .search_btn{
+    margin-right: 40px;
+}
+nav .search{
+    float: right;
+    margin-top: 25px;
+    height: 30px;
+    width: 230px;
+    margin-right: 9px;
+    border-radius: 9px;
+    box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.432);
+    border-color: rgba(99, 99, 99, 0.548);
+    
+}
+article{
+    background-color: rgb(233, 233, 233);
+    width: 82%;
+    height: 100%;
+    margin-left: 270px;
+    padding-top: 3px;
+    float: right;
+    
+}
+article h1{
+    margin-top: 100px;
+    margin-left: 350px;
+    margin-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+article .kotak{
+    width: 280px;
+    height: 160px;
+    border-radius: 10px;
+}
+article .kotak1{
+    background-color: rgb(57, 118, 209);
+    margin-top: 120px;
+    margin-left: 60px;
+}
+article .kotak2{
+    background-color: rgb(177, 190, 53);
+    margin-top: -160px;
+    margin-left: 400px;
+}
+article .kotak3{
+    background-color: rgb(72, 206, 72);
+    margin-top: -160px;
+    margin-left: 740px;
+
+}
+article .bawah{
+    margin-top: 16px;
+    background-color: rgba(0, 0, 0, 0.404);
+    width: 280px;
+    height: 30px;
+    border-radius: 0px 0px 10px 10px;
+}
+article .bawah p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: aliceblue;
+}
+article .kotak h2{
+    padding: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:larger;
+}
+article .kotak p{
+    padding: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: smaller;
+}
+table{
+    margin-left: 50px;
+}
+table,th,td,tr{
+    border: 1px solid black;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    height: 30px;
+    padding: 6px;
+}
+.job h1{
+    margin-top: 100px;
+    margin-left: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:larger ;
+}
+.job .kotak{
+    width: 220px;
+    height: 120px;
+}
+.job .kotak h2{
+    font-size: small;
+}
+.job .kotak p{
+    font-size: x-small;
+}
+.job .bawah{
+    width: 220px;
+    height: 23px;
+    margin-top: 32px;
+}
+.job .bawah p{
+    font-size: xx-small;
+    padding: 2px;
+}
+.job .kotak1{
+    margin-top: 10px;
+}
+.job .kotak2{
+    margin-left: 300px;
+    margin-top: -120px;
+}
+.job .kotak3{
+    margin-left: 540px;
+    margin-top: -120px;
+}
+.job .kotak4{
+    margin-left: 780px;
+    margin-top: -120px;
+    background-color: rgb(60, 199, 199);
+}
+.job h4{
+    float: right;
+    margin-top: -18px;
+    margin-right: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+.job .kesehatan{
+    margin-top: -60px;
+}
+.job .pertambangan{
+    margin-top: -60px;
+}
+.job .jasa{
+    margin-top: -60px;
+}
+aside{
+    background-color: rgb(63, 63, 63);
+    width: 20%;
+    height: 100%;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.925);
+    float: left;
+    position: fixed;
+    margin-top: 5.9%;
+}
+aside p{
+    margin-left: 50px;
+    margin-top: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: large;
+}
+aside img{
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+    float: left;
+    margin-top: 7px;
+    margin-right: 9px;
+    color: azure;
+}
+
+footer{
+    background-color: rgb(12, 12, 12);
+    width: 80%;
+    height: 70px;
+    margin-left: 271px;
+    color: rgb(255, 255, 255);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: small;
+    float: inline-end;
+}
+footer strong{
+    margin-left: 30px;
+}
+footer .footer-right{
+    float: right;
+    margin-right: 30px;
+}
