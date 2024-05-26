@@ -61,7 +61,7 @@ nav .search{
 article{
     background-color: rgb(233, 233, 233);
     width: 80%;
-    height: 80%;
+    height: 90%;
     margin-top: 6%;
     float: right;
     
@@ -72,26 +72,35 @@ article h1{
     margin-bottom: 30px;
     font-family: Arial, Helvetica, sans-serif;
 }
-article .kotak{
+/* article .kotak{
     width: 280px;
     height: 160px;
     border-radius: 10px;
 }
 article .kotak1{
     background-color: rgb(57, 118, 209);
-    margin-top: 50px;
-    margin-left: 60px;
 }
 article .kotak2{
     background-color: rgb(177, 190, 53);
     margin-top: -160px;
-    margin-left: 400px;
+    margin-left: 320px;
 }
 article .kotak3{
     background-color: rgb(72, 206, 72);
     margin-top: -160px;
-    margin-left: 740px;
-
+    margin-left: 640px;
+}
+article .kotak1:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+}
+article .kotak2:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+}
+article .kotak3:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
 }
 article .bawah{
     margin-top: 16px;
@@ -113,77 +122,79 @@ article .kotak p{
     padding: 5px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: smaller;
-}
+} */
 table{
     margin-left: 50px;
 }
 table,th,td,tr{
     border: 1px solid black;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: small;
+    font-size: medium;
     border-collapse: collapse;
-    height: 30px;
     padding: 6px;
 }
-.job{
-    margin-top: -50px;
+th{  
+    height: 60px;
+    background-color: cadetblue;
 }
-.job h1{
-    margin-top: 90px;
-    margin-left: 60px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size:larger ;
+tr,td{
+    background-color: #ffffff7c;
 }
-.job .kotak{
-    width: 220px;
-    height: 120px;
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
 }
-.job .kotak h2{
-    font-size: small;
+
+button.delete {
+    background-color: #DC3545;
 }
-.job .kotak p{
-    font-size: x-small;
+.job {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
-.job .bawah{
-    width: 220px;
-    height: 23px;
-    margin-top: 32px;
+#khome{
+    width: 280px;
+    float: left;
+    margin: 10px;
 }
-.job .bawah p{
-    font-size: xx-small;
-    padding: 2px;
+
+.kotak {
+    background: #ffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
-.job .kotak1{
-    margin-top: 10px;
+
+.kotak:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
 }
-.job .kotak2{
-    margin-left: 300px;
-    margin-top: -120px;
+
+.kotak h2 {
+    font-size: 1.5em;
+    color: #333;
 }
-.job .kotak3{
-    margin-left: 540px;
-    margin-top: -120px;
+
+.kotak p {
+    color: #666;
 }
-.job .kotak4{
-    margin-left: 780px;
-    margin-top: -120px;
-    background-color: rgb(60, 199, 199);
+
+.kotak .bawah {
+    margin-top: 20px;
 }
-.job h4{
-    float: right;
-    margin-top: -18px;
-    margin-right: 100px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: small;
-}
-.job .kesehatan{
-    margin-top: -60px;
-}
-.job .pertambangan{
-    margin-top: -60px;
-}
-.job .jasa{
-    margin-top: -60px;
+
+.kotak .bawah p {
+    color: #3498db;
+    cursor: pointer;
+    text-decoration: underline;
 }
 aside{
     background-color: rgb(63, 63, 63);
@@ -227,3 +238,18 @@ footer .footer-right{
     float: right;
     margin-right: 30px;
 }
+.form{
+    width: 1000px;
+    height: 90%;
+    background-color: rgba(185, 185, 185, 0.74);
+    margin-top: 40px;
+    margin-left: 30px;
+    padding: 40px;
+    box-shadow: 3px 2px 2px 0px rgba(0, 0, 0, 0.678);
+}
+.diagram h2{
+    margin-right: 600px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 200px;
+}
+
