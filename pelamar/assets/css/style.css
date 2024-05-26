@@ -60,15 +60,14 @@ nav .search{
 }
 article{
     background-color: rgb(233, 233, 233);
-    width: 82%;
-    height: 100%;
-    margin-left: 270px;
-    padding-top: 3px;
+    width: 80%;
+    height: 80%;
+    margin-top: 6%;
     float: right;
     
 }
 article h1{
-    margin-top: 100px;
+    margin-top: 30px;
     margin-left: 350px;
     margin-bottom: 30px;
     font-family: Arial, Helvetica, sans-serif;
@@ -80,7 +79,7 @@ article .kotak{
 }
 article .kotak1{
     background-color: rgb(57, 118, 209);
-    margin-top: 120px;
+    margin-top: 50px;
     margin-left: 60px;
 }
 article .kotak2{
@@ -121,12 +120,16 @@ table{
 table,th,td,tr{
     border: 1px solid black;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
     border-collapse: collapse;
     height: 30px;
     padding: 6px;
 }
+.job{
+    margin-top: -50px;
+}
 .job h1{
-    margin-top: 100px;
+    margin-top: 90px;
     margin-left: 60px;
     font-family: Arial, Helvetica, sans-serif;
     font-size:larger ;
@@ -207,7 +210,6 @@ aside img{
     margin-right: 9px;
     color: azure;
 }
-
 footer{
     background-color: rgb(12, 12, 12);
     width: 80%;
