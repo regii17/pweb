@@ -97,7 +97,17 @@ article .kotak3{
 article .kotak4{
     background-color: rgb(170, 0, 9);
     margin-top: 60px;
-    margin-left: -680px;
+    margin-left: 60px;
+}
+article .kotak5{
+    background-color: rgb(0, 0, 255);
+    margin-top: -160px;
+    margin-left: 400px;
+} 
+article .kotak6{
+    background-color: rgb(251, 255, 0);
+    margin-top: -160px;
+    margin-left: 400px;
 }
 article .bawah{
     margin-top: 16px;
@@ -171,6 +181,12 @@ table,th,td,tr{
     margin-top: -120px;
     background-color: rgb(60, 199, 199);
 }
+
+.job .kotak5{
+    margin-left: -400px;
+    margin-top: -120;
+    background-color: rgb(43, 226, 58);
+}
 .job h4{
     float: right;
     margin-top: -18px;
@@ -229,4 +245,67 @@ footer strong{
 footer .footer-right{
     float: right;
     margin-right: 30px;
+}
+.form{
+    width: 800px;
+    height: 470px;
+    background-color: rgb(99, 99, 99);
+    margin-top: 120px;
+    margin-left: 60px;
+    padding: 60px;
+}
+.text{
+    float: left;
+    margin-top: 40px;
+}
+.text p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    margin-top: 17px;
+}
+.input{
+    float: left;
+    margin-top: 40px;
+    margin-left: 30px;
+}
+.input input{
+    margin-top: 10px;
+    width: 360px;
+    height: 25px;
+}
+.btn{
+    margin-top: 300px;
+    margin-left: 120px;
+}
+.btn #kirim{
+    background-color: green;
+    width: 90px;
+    height: 35px;
+    border: 0px;
+    border-radius: 6px;
+ 
+
+}
+.btn #reset{
+    background-color: red;
+    width: 90px;
+    height: 35px;
+    border: 0px;
+    border-radius: 6px;
+    margin-left: 200px;
+}
+.img{
+    height: 100px;
+    width: 65px;
+    background-color: white;
+    float: left;
+}
+.info{
+    float: left;
+    margin-left: 30px;
+}
+.form #rec{
+    margin-top: 120px;
+    margin-bottom: 10px;
+
 }
