@@ -2,66 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/stylelogin.css">
-    <title>Login</title>
-    <!-- Tambahkan SweetAlert CSS dan JS dari CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <style>
-        /* CSS untuk preloader */
-
-    </style>
-    <script>
-        function handleLogin(event) {
-            event.preventDefault(); // Mencegah pengiriman form default
-            const username = document.querySelector('input[name="username"]').value;
-            const password = document.querySelector('input[name="password"]').value;
-
-            // Tampilkan preloader
-            document.querySelector('.preloader').style.display = 'flex';
-
-            // Logika pengecekan username setelah sedikit penundaan untuk memperlihatkan preloader
-            setTimeout(() => {
-                if (username === 'pelamar') {
-                    window.location.href = 'pelamar/home.html';
-                } else if (username === 'pengirim') {
-                    window.location.href = 'pengirim/home.html';
-                } else {
-                    document.querySelector('.preloader').style.display = 'none';
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Username tidak dikenali',
-                        text: 'Silakan coba lagi dengan username yang benar.',
-                    });
-                }
-            }, 2000); 
-        }
-    </script>
+    <link rel="stylesheet" href="assets/css/styleindex.css">
+    <title>SMKerja - Welcome</title>
 </head>
 <body>
-    <div class="preloader">
-        <div class="spinner"></div>
-    </div>
+    <nav>
+        <img id="logo" src="assets/img/logo.webp" alt="Logo perusahaan">
+        <div class="cta">
+            <a href="login.html">Masuk</a>
+            <a href="register.html">Buat Akun</a>
+        </div>
+    </nav>
     <div class="container">
-        <div class="login">
-            <div class="col kotak1">
-                <img src="assets/img/logo.webp" alt="">
+        <div class="hero">
+            <h1>Mencari Pekerjaan Menjadi Lebih Mudah Bagi Lulusan SMA / Sederajat</h1>
+            <p>Aplikasi perekrutan kerja kami membantu anda lulusan SMA / sederajat menemukan pekerjaan impian Anda dengan cepat dan mudah. Jelajahi berbagai lowongan pekerjaan dari perusahaan terkemuka dan dapatkan kesempatan untuk berkembang dalam karir Anda.</p>
+        </div>
+        <div class="features">
+            <div class="feature">
+                <h2>Lowongan Terbaru</h2>
+                <p>Temukan berbagai lowongan pekerjaan terbaru yang sesuai dengan keahlian dan minat Anda.</p>
             </div>
-
-            <div class="col kotak2">
-                <div class="form">
-                    <h1>LOGIN</h1>
-                    <h5>Username</h5>
-                    <input type="text" name="username" placeholder="Username">
-                    <h5>Password</h5>
-                    <input type="password" name="password" placeholder="Password">
-                    <button onclick="handleLogin(event)">LOGIN</button>
-                </div>
+            <div class="feature">
+                <h2>Perusahaan Ternama</h2>
+                <p>Bekerja di perusahaan-perusahaan ternama yang menawarkan lingkungan kerja yang inovatif dan dinamis.</p>
+            </div>
+            <div class="feature">
+                <h2>Proses Mudah</h2>
+                <p>Proses aplikasi yang mudah dan cepat, sehingga Anda bisa fokus pada hal-hal yang penting.</p>
             </div>
         </div>
-        <h3>Belum memiliki akun? <a href="register.html">Register</a></h3>
+        <div class="testimonials">
+            <h2>Apa Kata Mereka?</h2>
+            <div class="testimonial">
+                <p>"Aplikasi ini sangat membantu saya yang memiliki jenjang pendidikan SMK"</p>
+                <div class="author">- Regi, Software Engineer</div>
+            </div>
+            <div class="testimonial">
+                <p>"Saya sangat terbantu dengan fitur-fitur yang ada di aplikasi ini. Sekarang saya bekerja di perusahaan ternama."</p>
+                <div class="author">- Udin, Data Analyst</div>
+            </div>
+        </div>
     </div>
+    <footer>
+        <br>
+        <strong>Copyright &copy; 2023-2024 <a href="#">Regii</a>.</strong>
+         All rights reserved.
+         <div class="footer-right">
+            <b>Version</b> 0.0.1
+         </div>
+
+    </footer>
 </body>
 </html>

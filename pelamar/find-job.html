@@ -10,16 +10,20 @@
 <body style="height: 700px;">
     <nav>
         <img id="logo" src="assets/img/logo.webp" alt="Logo perusahaan">
-        <a href="../index.html">
-        <img class="logout" src="assets/img/exit.png" alt="">
-        </a>
-        <a href="#">
-            <img class="search_btn" src="assets/img/search.png" alt="">
-        </a>
-        <input type="text" class="search" placeholder="Cari Pekerjaan" onkeyup="searchJobs()">
+        <div class="logout">
+            <a href="../index.html">
+                <img class="logout" src="assets/img/exit.png" alt="">
+            </a>
+        </div>
+
     </nav>
     <article>
         <div class="form" style="height: 90%;">
+            <div class="search_box">
+                <img class="search_img" src="assets/img/search.png" alt="">
+                <input type="text" class="search" placeholder="Cari Pekerjaan" onkeyup="searchJobs()">
+            </div>
+            <br><br><br>
             <div class="job" id="jobContainer">
             </div>
         </div>

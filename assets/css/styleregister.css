@@ -49,7 +49,7 @@ body {
 .form button {
     width: 100%;
     padding: 10px;
-    background: #3498db;
+    background: #155a38;
     border: none;
     border-radius: 5px;
     color: white;
@@ -59,7 +59,7 @@ body {
 }
 
 .form button:hover {
-    background: #2980b9;
+    background: #22945b;
 }
 
 .form .role-selection {
@@ -80,7 +80,7 @@ h3 {
 }
 
 h3 a {
-    color: #3498db;
+    color: #155a38;
     text-decoration: none;
 }
 

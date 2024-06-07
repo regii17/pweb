@@ -35,24 +35,22 @@ nav h1{
     color: white;
     margin-top: 10px;
     padding: 8px;
-    
 }
-nav img{
+.logout img{
     float: right;
-    width: 25px;
-    height: 25px;
-    margin-top: 25px;
+    width: 35px;
+    height: 35px;
+    margin-top: 30px;
     margin-right: 20px;
 }
-nav .search_btn{
-    margin-right: 40px;
+article .search_img{
+    margin-right: 10px;
+    width: 35px;
+    height: 35px;
 }
-nav .search{
-    float: right;
-    margin-top: 25px;
-    height: 30px;
-    width: 230px;
-    margin-right: 9px;
+article .search{
+    height: 40px;
+    width: 330px;
     border-radius: 9px;
     box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.432);
     border-color: rgba(99, 99, 99, 0.548);
