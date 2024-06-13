@@ -72,7 +72,7 @@ function handleRegister(event) {
 
 //mengisi district
 const provinces = {
-    "Jawa Barat": ["Bandung", "Bogor", "Bekasi"],
+    "Jawa Barat": ["Bandung", "Bogor", "Bekasi","Subang"],
     "Jawa Tengah": ["Semarang", "Surakarta", "Magelang"],
     "Jawa Timur": ["Surabaya", "Malang", "Kediri"]
 };
@@ -81,6 +81,7 @@ const districts = {
     "Bandung": ["Andir", "Astana Anyar", "Bojongloa Kaler"],
     "Bogor": ["Bogor Barat", "Bogor Timur", "Bogor Utara"],
     "Bekasi": ["Bekasi Barat", "Bekasi Timur", "Bekasi Utara"],
+    "Subang": ["Kasomalang", "Cisalak", "Jalan Cagak"],
     "Semarang": ["Banyumanik", "Candisari", "Gajah Mungkur"],
     "Surakarta": ["Banjarsari", "Jebres", "Laweyan"],
     "Magelang": ["Magelang Selatan", "Magelang Tengah", "Magelang Utara"],

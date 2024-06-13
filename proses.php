@@ -26,12 +26,12 @@ else{
             $_POST['kota'],
             $_POST['kec'],
             $_POST['alamat']);
-            header("location:profile.php?pesan=updateberhasil");
+            header("location:pelamar/profile.php?pesan=updateberhasil");
     }
     else if($aksi == "pelamarregister"){
         $db->input_pelamar(
-            $_POST['pelamar_nama'],
             $_POST['pelamar_username'],
+            $_POST['pelamar_nama'],
             $_POST['pelamar_password'],
             $_POST['pelamar_email'],
             $_POST['pelamar_notelp'],

@@ -12,7 +12,7 @@ if(!isset($_SESSION['status'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/ss.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Profil - SMKerja</title>
@@ -42,7 +42,7 @@ if(!isset($_SESSION['status'])){
                     <img src="assets/img/user.jpg" alt="Foto Profil">
                     <?php
                     $username = $_SESSION['username'];
-                    foreach($db->detail_data("pelamar",$username) as $x){
+                    foreach ($db->detail_data($username, "pelamar", "username") as $x) {
                     ?>
                     <div>
                         <h2><?php echo $x['nama']; ?></h2>
