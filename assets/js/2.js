@@ -1,26 +1,8 @@
 //function login
 function handleLogin(event) {
-    event.preventDefault(); // Mencegah pengiriman form default
-    const username = document.querySelector('input[name="username"]').value;
-    const password = document.querySelector('input[name="password"]').value;
-
-    // Tampilkan preloader
+   
     document.querySelector('.preloader').style.display = 'flex';
-
-    // Logika pengecekan username setelah sedikit penundaan untuk memperlihatkan preloader
     setTimeout(() => {
-        if (username === 'pelamar') {
-            window.location.href = 'pelamar/home.html';
-        } else if (username === 'pengirim') {
-            window.location.href = 'pengirim/home.html';
-        } else {
-            document.querySelector('.preloader').style.display = 'none';
-            Swal.fire({
-                icon: 'error',
-                title: 'Username tidak dikenali',
-                text: 'Silakan coba lagi dengan username yang benar.',
-            });
-        }
     }, 2000); 
 }
 //function register
