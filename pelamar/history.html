@@ -5,40 +5,82 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>SMKerja</title>
+    <title>Riwayat - SMKerja</title>
 </head>
-<body>
+<body style="height: 750px;">
     <nav>
         <img id="logo" src="assets/img/logo.webp" alt="Logo perusahaan">
-        <a href="../index.html">
-        <img class="logout" src="assets/img/exit.png" alt="">
-        </a>
-        <a href="#">
-            <img class="search_btn" src="assets/img/search.png" alt="">
-        </a>
-        <input type="text" class="search" placeholder="Cari Pekerjaan">
+        <div class="logout">
+            <a href="../index.html">
+                <img class="logout" src="assets/img/exit.png" alt="">
+            </a>
+        </div>
+
     </nav>
     <article>
-        
+        <div class="form">
+            <section id="apply-history">
+                <h2>History Melamar Pekerjaan</h2>
+                <select id="sort-options" onchange="sortHistory()">
+                    <option value="date">Urutkan berdasarkan tanggal</option>
+                    <option value="status">Urutkan berdasarkan status</option>
+                </select>
+                <ul id="history-list">
+                    <li>
+                        <h3>Software Engineer - Jakarta</h3>
+                        <p>Melamar pada: 2024-01-01</p>
+                        <p>Status: Dalam proses</p>
+                    </li>
+                    <li>
+                        <h3>Data Analyst - Surabaya</h3>
+                        <p>Melamar pada: 2024-02-15</p>
+                        <p>Status: Diterima</p>
+                    </li>
+                    <li>
+                        <h3>UI/UX Designer - Bandung</h3>
+                        <p>Melamar pada: 2024-03-20</p>
+                        <p>Status: Ditolak</p>
+                    </li>
+                    <li>
+                        <h3>Marketing Manager - Yogyakarta</h3>
+                        <p>Melamar pada: 2024-04-05</p>
+                        <p>Status: Dalam proses</p>
+                    </li>
+                </ul>
+            </section>
+    </div>
     </article>
     <aside>
         <br><br>
         <a href="home.html">
             <img src="assets/img/home.png" alt="">
-            <p>Beranda</p><br>
+            <b><p>Beranda</p></b>
         </a>
         <a href="find-job.html">
             <img src="assets/img/find_job.png" alt="">
-            <p>Daftar pekerjaan</p><br>
+            <b><p>Daftar pekerjaan</p></b>
         </a>
         <a href="offer-job.html">
-            <img src="assets/img/give_job.png" alt="" srcset="">
-            <p>Tawaran pekerjaan</p><br>
+            <img src="assets/img/give_job.png" alt="">
+            <b><p>Tawaran pekerjaan</p></b>
+        </a>
+        <a href="notification.html">
+            <img src="assets/img/notification.png" alt="">
+            <b><p>Notifikasi</p></b>
         </a>
         <a href="#">
             <img src="assets/img/riwayat.png" alt="">
-            <p>Riwayat </p>
+            <b><p>Riwayat </p></b>
         </a>
+        <a href="profile.html">
+            <img src="assets/img/profile.png" alt="">
+            <b><p>Profile </p></b>
+        </a><br>
+        <a href="help.html">
+            <img src="assets/img/help.png" alt="">
+            <b><p>Bantuan</p></b>
+        </a>
+
 
     </aside>
     <footer>
@@ -50,6 +92,7 @@
          </div>
 
     </footer>
+    <script src="assets/js/script.js"></script>
 
     
     

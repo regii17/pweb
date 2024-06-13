@@ -5,77 +5,97 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>SMKerja</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Tawaran Pekerjaan - SMKerja</title>
 </head>
 <body>
     <nav>
         <img id="logo" src="assets/img/logo.webp" alt="Logo perusahaan">
-        <a href="../index.html">
-        <img class="logout" src="assets/img/exit.png" alt="">
-        </a>
-        <a href="#">
-            <img class="search_btn" src="assets/img/search.png" alt="">
-        </a>
-        <input type="text" class="search" placeholder="Cari Pekerjaan">
+        <div class="logout">
+            <a href="../index.html">
+                <img class="logout" src="assets/img/exit.png" alt="">
+            </a>
+        </div>
+
     </nav>
     <article>
-        <h1>Tawaran Pekerjaan Kepada Anda</h1>
-        <table>
-            <tr>
-                <th>No</th>
-                <th>Nama Perusahaan</th>
-                <th>Alamat Perusahaan</th>
-                <th>Gaji</th>
-                <th>Tanggal</th>
-                <th colspan="2">Tindakan</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>PT.Mencari cinta sejati</td>
-                <td>Jl.Harimau Desa Macan Kecamatan Banguntapan Kab/Kota Bantul - DIY</td>
-                <td>4.200.000</td>
-                <td>16 - 2 - 2024</td>
-                <td>Contact</td>
-                <td>Hapus</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>PT.Maju Terus</td>
-                <td>Jl.Sadboy Desa Kucing Kecamatan Biru Kab/Kota Bandung - Jawa Barat</td>
-                <td>3.100.000</td>
-                <td>12 - 4 - 2023</td>
-                <td>Contact</td>
-                <td>Hapus</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>PT.Dua Abadi</td>
-                <td>Jl.Genteng Desa Boom Kecamatan Mie Kab/Kota Subang - Jawa Barat</td>
-                <td>4.850.000</td>
-                <td>3 - 1 - 2024</td>
-                <td>Contact</td>
-                <td>Hapus</td>
-            </tr>
-        </table>
+        <div class="form">
+            <h1 style="margin-left: 250px;">Tawaran Pekerjaan Kepada Anda</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama Perusahaan</th>
+                        <th>Alamat Perusahaan</th>
+                        <th>Gaji</th>
+                        <th>Tanggal</th>
+                        <th colspan="2">Tindakan</th>
+                    </tr>
+                </thead>
+                <tbody id="jobOffers">
+                    <tr>
+                        <td>1</td>
+                        <td>PT.Mencari cinta sejati</td>
+                        <td>Jl.Harimau Desa Macan Kecamatan Banguntapan Kab/Kota Bantul - DIY</td>
+                        <td>4.200.000</td>
+                        <td>16 - 2 - 2024</td>
+                        <td><button class="contact">Contact</button></td>
+                        <td><button class="delete">Hapus</button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>PT.Maju Terus</td>
+                        <td>Jl.Sadboy Desa Kucing Kecamatan Biru Kab/Kota Bandung - Jawa Barat</td>
+                        <td>3.100.000</td>
+                        <td>12 - 4 - 2023</td>
+                        <td><button class="contact">Contact</button></td>
+                        <td><button class="delete">Hapus</button></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>PT.Dua Abadi</td>
+                        <td>Jl.Genteng Desa Boom Kecamatan Mie Kab/Kota Subang - Jawa Barat</td>
+                        <td>4.850.000</td>
+                        <td>3 - 1 - 2024</td>
+                        <td><button class="contact">Contact</button></td>
+                        <td><button class="delete">Hapus</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </article>
     <aside>
         <br><br>
         <a href="home.html">
             <img src="assets/img/home.png" alt="">
-            <p>Beranda</p><br>
+            <b><p>Beranda</p></b>
         </a>
         <a href="find-job.html">
             <img src="assets/img/find_job.png" alt="">
-            <p>Daftar pekerjaan</p><br>
+            <b><p>Daftar pekerjaan</p></b>
         </a>
         <a href="#">
-            <img src="assets/img/give_job.png" alt="" srcset="">
-            <p>Tawaran pekerjaan</p><br>
+            <img src="assets/img/give_job.png" alt="">
+            <b><p>Tawaran pekerjaan</p></b>
+        </a>
+        <a href="notification.html">
+            <img src="assets/img/notification.png" alt="">
+            <b><p>Notifikasi</p></b>
         </a>
         <a href="history.html">
             <img src="assets/img/riwayat.png" alt="">
-            <p>Riwayat </p>
+            <b><p>Riwayat </p></b>
         </a>
+        <a href="profile.html">
+            <img src="assets/img/profile.png" alt="">
+            <b><p>Profile </p></b>
+        </a><br>
+        <a href="help.html">
+            <img src="assets/img/help.png" alt="">
+            <b><p>Bantuan</p></b>
+        </a>
+
 
     </aside>
     <footer>
@@ -87,6 +107,7 @@
          </div>
 
     </footer>
+    <script src="assets/js/script.js"></script>
 
     
     

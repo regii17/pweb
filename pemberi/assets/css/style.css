@@ -80,29 +80,25 @@ article .kotak{
 }
 article .kotak1{
     background-color: rgb(57, 118, 209);
-    margin-top: 120px;
-    margin-left: 60px;
 }
 article .kotak2{
     background-color: rgb(177, 190, 53);
     margin-top: -160px;
-    margin-left: 400px;
+    margin-left: 320px;
 }
 article .kotak3{
     background-color: rgb(72, 206, 72);
     margin-top: -160px;
-    margin-left: 740px;
-
+    margin-left: 640px;
 }
 article .kotak4{
     background-color: rgb(170, 0, 9);
     margin-top: 60px;
-    margin-left: 60px;
 }
 article .kotak5{
     background-color: rgb(0, 0, 255);
     margin-top: -160px;
-    margin-left: 400px;
+    margin-left: 320px;
 } 
 article .kotak6{
     background-color: rgb(251, 255, 0);
@@ -247,12 +243,13 @@ footer .footer-right{
     margin-right: 30px;
 }
 .form{
-    width: 800px;
+    width: 1000px;
     height: 470px;
-    background-color: rgb(99, 99, 99);
+    background-color: rgba(92, 92, 92, 0.74);
     margin-top: 120px;
     margin-left: 60px;
-    padding: 60px;
+    padding: 40px;
+    box-shadow: 3px 2px 2px 0px rgba(0, 0, 0, 0.678);
 }
 .text{
     float: left;
@@ -274,25 +271,26 @@ footer .footer-right{
     height: 25px;
 }
 .btn{
-    margin-top: 300px;
+    margin-top: 330px;
     margin-left: 120px;
 }
 .btn #kirim{
-    background-color: green;
+    background-color: rgb(0, 255, 0);
     width: 90px;
     height: 35px;
     border: 0px;
     border-radius: 6px;
+    margin-left: 53px;
  
 
 }
 .btn #reset{
-    background-color: red;
+    background-color: rgb(255, 25, 25);
     width: 90px;
     height: 35px;
     border: 0px;
     border-radius: 6px;
-    margin-left: 200px;
+    margin-left: 180px;
 }
 .img{
     height: 100px;

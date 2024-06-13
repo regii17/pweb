@@ -8,7 +8,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('../img/background.webp');
+    background-color: rgba(190, 190, 190, 0.685);
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -49,12 +49,10 @@ body{
     display: flex;
     align-items: left;
     text-shadow: 2px 2px 2px 0px rgba(0,0,0,0.8);
-    padding: 10px;
-
-   
+    padding: 10px;  
 }
 .form h5{
-    color: rgb(0, 0, 0);
+    color: rgb(197, 197, 197);
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     margin-top: 8px;
@@ -94,7 +92,7 @@ input {
     padding: 10px;
 }
 .kotak2{
-    background-color: rgb(61, 58, 207);
+    background-color:#155a38;
     box-shadow: 3px 2px 3px 0px rgb(0, 0, 0);
     padding: 10px;
 }
@@ -104,7 +102,6 @@ input {
     color: white;
     font-size: 17px;
     transition: 0.6s;
-   
 }
 .alert {
     width: 50rem;
@@ -114,5 +111,45 @@ input {
 .card {
     background-color: aqua;
 
+}
+.preloader {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+.preloader .spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #155a38;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+h3 {
+    text-align: center;
+    color: #555;
+    font-family: Arial, sans-serif;
+    margin-top: 25px;
+    font-size: larger;
+}
+
+h3 a {
+    color: #155a38;
+    text-decoration: none;
+}
+
+h3 a:hover {
+    text-decoration: underline;
 }
 

@@ -5,188 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>SMKerja</title>
+    <title>Daftar Pekerjaan - SMKerja</title>
 </head>
-<body style="height: 200vh;">
+<body style="height: 700px;">
     <nav>
         <img id="logo" src="assets/img/logo.webp" alt="Logo perusahaan">
-        <a href="../index.html">
-        <img class="logout" src="assets/img/exit.png" alt="">
-        </a>
-        <a href="#">
-            <img class="search_btn" src="assets/img/search.png" alt="">
-        </a>
-        <input type="text" class="search" placeholder="Cari Pekerjaan">
+        <div class="logout">
+            <a href="../index.html">
+                <img class="logout" src="assets/img/exit.png" alt="">
+            </a>
+        </div>
+
     </nav>
     <article>
-        <div class="job">
-            <div class="job it">
-                <h1>Informasi Dan Teknologi</h1>
-                <h4>Lihat selengkapnya ></h4>
-                <div class="kotak">
-                    <div class="kotak kotak1">
-                        <center>
-                            <h2>JUDUL PEKERJAAN</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                        </center>
-                        <div class="bawah">
-                            <center><p>Learn more</p></center>
-                        </div>
-                    </div>
-                    <div class="kotak kotak2">
-                        <center>
-                            <h2>JUDUL PEKERJAAN</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                        </center>
-                        <div class="bawah">
-                            <center><p>Learn more</p></center>
-                        </div>
-                    </div>
-                    <div class="kotak kotak3">
-                        <center>
-                            <h2>JUDUL PEKERJAAN </h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                        </center>
-                        <div class="bawah">
-                            <center><p>Learn more</p></center>
-                        </div>
-                    </div>
-                    <div class="kotak kotak4">
-                        <center>
-                            <h2>JUDUL PEKERJAAN </h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                        </center>
-                        <div class="bawah">
-                            <center><p>Learn more</p></center>
-                        </div>
-                    </div>
-                </div>
+        <div class="form" style="height: 90%;">
+            <div class="search_box">
+                <img class="search_img" src="assets/img/search.png" alt="">
+                <input type="text" class="search" placeholder="Cari Pekerjaan" onkeyup="searchJobs()">
             </div>
-            <div class="job kesehatan">
-                <h1>Kesehatan</h1>
-                <h4>Lihat selengkapnya ></h4>
-                <div class="kotak">
-                    <div class="kotak kotak1">
-                        <center>
-                            <h2>JUDUL PEKERJAAN</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                        </center>
-                        <div class="bawah">
-                            <center><p>Learn more</p></center>
-                        </div>
-                    </div>
-                    <div class="kotak kotak2">
-                        <center>
-                            <h2>JUDUL PEKERJAAN</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                        </center>
-                        <div class="bawah">
-                            <center><p>Learn more</p></center>
-                        </div>
-                    </div>
-                    <div class="kotak kotak3">
-                        <center>
-                            <h2>JUDUL PEKERJAAN </h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                        </center>
-                        <div class="bawah">
-                            <center><p>Learn more</p></center>
-                        </div>
-                    </div>
-                    <div class="kotak kotak4">
-                        <center>
-                            <h2>JUDUL PEKERJAAN </h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                        </center>
-                        <div class="bawah">
-                            <center><p>Learn more</p></center>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="job pertambangan">
-                <h1>Pertambangan</h1>
-                <h4>Lihat selengkapnya ></h4>
-                <div class="kotak">
-                    <div class="kotak kotak1">
-                        <center>
-                            <h2>JUDUL PEKERJAAN</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                        </center>
-                        <div class="bawah">
-                            <center><p>Learn more</p></center>
-                        </div>
-                    </div>
-                    <div class="kotak kotak2">
-                        <center>
-                            <h2>JUDUL PEKERJAAN</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                        </center>
-                        <div class="bawah">
-                            <center><p>Learn more</p></center>
-                        </div>
-                    </div>
-                    <div class="kotak kotak3">
-                        <center>
-                            <h2>JUDUL PEKERJAAN </h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                        </center>
-                        <div class="bawah">
-                            <center><p>Learn more</p></center>
-                        </div>
-                    </div>
-                    <div class="kotak kotak4">
-                        <center>
-                            <h2>JUDUL PEKERJAAN </h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                        </center>
-                        <div class="bawah">
-                            <center><p>Learn more</p></center>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="job jasa">
-                <h1>Jasa</h1>
-                <h4>Lihat selengkapnya ></h4>
-                <div class="kotak">
-                    <div class="kotak kotak1">
-                        <center>
-                            <h2>JUDUL PEKERJAAN</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                        </center>
-                        <div class="bawah">
-                            <center><p>Learn more</p></center>
-                        </div>
-                    </div>
-                    <div class="kotak kotak2">
-                        <center>
-                            <h2>JUDUL PEKERJAAN</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                        </center>
-                        <div class="bawah">
-                            <center><p>Learn more</p></center>
-                        </div>
-                    </div>
-                    <div class="kotak kotak3">
-                        <center>
-                            <h2>JUDUL PEKERJAAN </h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                        </center>
-                        <div class="bawah">
-                            <center><p>Learn more</p></center>
-                        </div>
-                    </div>
-                    <div class="kotak kotak4">
-                        <center>
-                            <h2>JUDUL PEKERJAAN </h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                        </center>
-                        <div class="bawah">
-                            <center><p>Learn more</p></center>
-                        </div>
-                    </div>
-                </div>
+            <br><br><br>
+            <div class="job" id="jobContainer">
             </div>
         </div>
     </article>
@@ -194,20 +32,33 @@
         <br><br>
         <a href="home.html">
             <img src="assets/img/home.png" alt="">
-            <p>Beranda</p><br>
+            <b><p>Beranda</p></b>
         </a>
         <a href="#">
             <img src="assets/img/find_job.png" alt="">
-            <p>Daftar pekerjaan</p><br>
+            <b><p>Daftar pekerjaan</p></b>
         </a>
         <a href="offer-job.html">
-            <img src="assets/img/give_job.png" alt="" srcset="">
-            <p>Tawaran pekerjaan</p><br>
+            <img src="assets/img/give_job.png" alt="">
+            <b><p>Tawaran pekerjaan</p></b>
+        </a>
+        <a href="notification.html">
+            <img src="assets/img/notification.png" alt="">
+            <b><p>Notifikasi</p></b>
         </a>
         <a href="history.html">
             <img src="assets/img/riwayat.png" alt="">
-            <p>Riwayat </p>
+            <b><p>Riwayat </p></b>
         </a>
+        <a href="profile.html">
+            <img src="assets/img/profile.png" alt="">
+            <b><p>Profile </p></b>
+        </a><br>
+        <a href="help.html">
+            <img src="assets/img/help.png" alt="">
+            <b><p>Bantuan</p></b>
+        </a>
+
 
     </aside>
     <footer>
@@ -217,8 +68,8 @@
          <div class="footer-right">
             <b>Version</b> 0.0.1
          </div>
-
     </footer>
+    <script src="assets/js/script.js"></script>
 
     
     

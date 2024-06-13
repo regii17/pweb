@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="assets/css/styleregister.css">
+    <style>
+        /* CSS tambahan untuk membuat dropdown dinamis */
+  
+        .form input, .form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .role-selection {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .role-selection label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .form{
+            margin-top: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <h1>REGISTER</h1>
+            <div class="role-selection">
+                <label>
+                    <input type="radio" name="role" value="pelamar" onclick="switchForm('pelamar')" checked> Pelamar
+                </label>
+                <label>
+                    <input type="radio" name="role" value="pemberi" onclick="switchForm('pemberi')"> Pemberi
+                </label>
+            </div>
+
+            <form id="pelamarForm" style="display: block;">
+                <h5>Nama</h5>
+                <input type="text" name="pelamar_nama" placeholder="Nama">
+                <h5>Provinsi</h5>
+                <select id="pelamar_provinsi" name="pelamar_provinsi" onchange="updateCities('pelamar')">
+                    <option value="">Pilih Provinsi...</option>
+                </select>
+                <h5>Kota</h5>
+                <select id="pelamar_kota" name="pelamar_kota" onchange="updateDistricts('pelamar')">
+                    <option value="">Pilih Kota...</option>
+                </select>
+                <h5>Kecamatan</h5>
+                <select id="pelamar_kecamatan" name="pelamar_kecamatan">
+                    <option value="">Pilih Kecamatan...</option>
+                </select>
+                <h5>Alamat spesifik</h5>
+                <input type="text" name="pelamar_alamat" placeholder="Jalan..">
+                <h5>Email</h5>
+                <input type="email" name="pelamar_email" placeholder="Email">
+                <h5>Tanggal Lahir</h5>
+                <input type="date" name="pelamar_ttl">
+                <h5>Foto Profil</h5>
+                <input type="file" name="pelamar_foto" accept="image/*">
+            </form>
+
+            <form id="pemberiForm" style="display: none;">
+                <h5>Nama</h5>
+                <input type="text" name="pemberi_nama" placeholder="Nama">
+                <h5>Provinsi</h5>
+                <select id="pemberi_provinsi" onchange="updateCities('pemberi')">
+                    <option value="">Pilih Provinsi...</option>
+                </select>
+                <h5>Kota</h5>
+                <select id="pemberi_kota" onchange="updateDistricts('pemberi')">
+                    <option value="">Pilih Kota...</option>
+                </select>
+                <h5>Kecamatan</h5>
+                <select id="pemberi_kecamatan">
+                    <option value="">Pilih Kecamatan...</option>
+                </select>
+                <h5>Alamat spesifik</h5>
+                <input type="text" name="pemberi_alamat" placeholder="Jalan...">
+                <h5>Asal Perusahaan</h5>
+                <input type="text" name="pemberi_perusahaan" placeholder="Asal Perusahaan">
+                <h5>Email</h5>
+                <input type="email" name="pemberi_email" placeholder="Email">
+            </form>
+
+            <button onclick="handleRegister(event)">REGISTER</button>
+        </div>
+        <h3>Sudah memiliki akun? <a href="login.html">Login</a></h3>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
