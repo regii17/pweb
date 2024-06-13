@@ -52,9 +52,14 @@ class Database
 	}
 	function detail_data($id ,$table, $pk){
 		$data = mysqli_query($this->koneksi, "SELECT * from $table where $pk='$id'");
+		if (!$data){
+			die("Query error : " .mysqli_error($this->koneksi));
+		}
+		$hasil = [];
 		while ($d = mysqli_fetch_array($data)) {
 			$hasil[] = $d;
 		}
+		return $hasil;
 	}
 
 }
