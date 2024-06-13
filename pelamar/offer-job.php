@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<?php
+session_start();
+include '../database.php';
+$db = new database();
+if(!isset($_SESSION['status'])){
+	header("location:../index.php?pesan=belumlogin");
+}
+ ?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,15 +18,7 @@
     <title>Tawaran Pekerjaan - SMKerja</title>
 </head>
 <body>
-    <nav>
-        <img id="logo" src="assets/img/logo.webp" alt="Logo perusahaan">
-        <div class="logout">
-            <a href="../index.html">
-                <img class="logout" src="assets/img/exit.png" alt="">
-            </a>
-        </div>
-
-    </nav>
+<?php include 'nav.php'; ?>
     <article>
         <div class="form">
             <h1 style="margin-left: 250px;">Tawaran Pekerjaan Kepada Anda</h1>
@@ -65,39 +65,7 @@
             </table>
         </div>
     </article>
-    <aside>
-        <br><br>
-        <a href="home.html">
-            <img src="assets/img/home.png" alt="">
-            <b><p>Beranda</p></b>
-        </a>
-        <a href="find-job.html">
-            <img src="assets/img/find_job.png" alt="">
-            <b><p>Daftar pekerjaan</p></b>
-        </a>
-        <a href="#">
-            <img src="assets/img/give_job.png" alt="">
-            <b><p>Tawaran pekerjaan</p></b>
-        </a>
-        <a href="notification.html">
-            <img src="assets/img/notification.png" alt="">
-            <b><p>Notifikasi</p></b>
-        </a>
-        <a href="history.html">
-            <img src="assets/img/riwayat.png" alt="">
-            <b><p>Riwayat </p></b>
-        </a>
-        <a href="profile.html">
-            <img src="assets/img/profile.png" alt="">
-            <b><p>Profile </p></b>
-        </a><br>
-        <a href="help.html">
-            <img src="assets/img/help.png" alt="">
-            <b><p>Bantuan</p></b>
-        </a>
-
-
-    </aside>
+    <?php include 'sidebar.php'; ?>
     <footer>
         <br>
         <strong>Copyright &copy; 2023-2024 <a href="#">Regii</a>.</strong>

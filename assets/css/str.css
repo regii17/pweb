@@ -87,3 +87,28 @@ h3 a {
 h3 a:hover {
     text-decoration: underline;
 }
+
+.form input, .form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.role-selection {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.role-selection label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.container{
+    margin-top: 600px;
+}
