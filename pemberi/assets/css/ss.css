@@ -45,11 +45,10 @@ nav .logout img {
 
 .search_box .search {
     height: 45px;
-    width: 95%;
+    width: 810px;
     border: none;
     outline: none;
     font-size: 16px;
-    padding-left: 10px;
     border-radius: 9px 0 0 9px;
 }
 
@@ -60,6 +59,8 @@ nav .logout img {
     height: 60px;
     width: 100px;
     border-radius: 0px 9px 9px 0px;
+    float: right;
+    margin-right: -109px;
 }
 
 .search_box .search_img {
@@ -409,6 +410,29 @@ border: 1px solid #ccc;
 border-radius: 4px;
 font-size: 14px;
 }
+.form .input{
+    width: 650px;
+    float: right;
+}
+.form .text{
+    float: left;
+    margin-top: -15px;
+}
+.form .text p{
+    font-size: larger;
+    margin: 27px;
+}
+.form .btn{
+    margin-top: 400px;
+}
+.form .btn button{
+    width: 90px;
+    height: 50px;
+    border-radius: 10px;
+    color:  white;
+    background-color:  #155a38;
+    margin: 20px;
+}
 
 .help-container {
     background-color: #fff;
@@ -498,31 +522,4 @@ font-size: 14px;
 
 .chat-input button:hover {
     background-color: #2d4373;
-}
-.text {
-    float: left;
-    width: 25%; /* Atur lebar div text */
-    text-align: right;
-    padding-right: 20px; /* Atur padding kanan untuk jarak dari input */
-    margin-top: -20px;
-}
-
-.input {
-    float: right;
-    width: 75%; /* Atur lebar div input */
-}
-
-.text p,
-.input input {
-    margin-bottom: 10px; /* Atur jarak antar elemen */
-}
-.text p{
-    margin: 29px;
-    font-size: medium;
-}
-
-.form .btn button{
-    height: 40px;
-    width: 80px;
-    border-radius: 10px;
 }

@@ -1,69 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<?php
+session_start();
+include '../database.php';
+$db = new database();
+if(!isset($_SESSION['status'])){
+	header("location:../index.php?pesan=belumlogin");
+}
+ ?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/ss.css">
     <title>Daftar Pekerjaan - SMKerja</title>
 </head>
 <body>
 <?php include 'nav.php'; ?>
     <article style="height: 800px;">
-       <div class="form" style="height: 650px;">
-        <center><h2>pencari kerja</h2></center>
-        <br>
-        <hr ><br><br>
+    <div class="form" style="height: 90%;">
+            <div class="search_box">
+            <form action="find-job.php" method="get">
+                <input type="text" name = "cari" class="search" placeholder="Cari Pelamar Pekerjaan">
+                <button class="search_btn" type = "submit">
+                    <img class="search_img" src="assets/img/search.png" alt="">
+                </button>
+            </form>
+            </div>
+            <br><br><br>
+            <div class="job" id="jobContainer">
+            <?php
+                if(isset($_GET['cari'])){
+                    $cari = $_GET['cari'];
+                    foreach($db->cari_job($cari) as $d){
+                        ?>
+                    <div class="kotak">
+                    <h2><?php echo $d['title']; ?></h2>
+                    <p><?php echo $d['description']; ?></p>
+                    <div class="bawah">
+                        <p>Learn more</p>
+                    </div>
+                </div>
+                <?php
+                    };		
+                }else{
+                    foreach($db->tampil_data("jobs","id") as $d){
+                        ?>
+                    <div class="kotak">
+                    <h2><?php echo $d['title']; ?></h2>
+                    <p><?php echo $d['description']; ?></p>
+                    <div class="bawah">
+                        <p>Learn more</p>
+                    </div>
+                </div>
+                <?php
+                    };
+                }
+            ?>
 
-        <div class="img">
-            <center><p>fot</p></center>
+            </div>
         </div>
-        <div class="info">
-            <h3>nama pelamar</h3>
-        <p>bidang keahlian</p>
-        <p>umur </p>
-        <p>jenjang pendidikan</p>
-
-        </div>
-        <hr id="rec">
-
-        <div class="img">
-            <center><p>foto</p></center>
-        </div>
-        <div class="info">
-            <h3>nama pelamar</h3>
-        <p>bidang keahlian</p> 
-        <p>umur </p>
-        <p>jenjang pendidikan</p>
-
-        </div>
-        <hr id="rec">
-
-        <div class="img">
-            <center><p>foto</p></center>
-        </div>
-        <div class="info">
-            <h3>nama pelamar</h3>
-        <p>bidang keahlian</p>
-        <p>umur </p>
-        <p>jenjang pendidikan</p>
-
-        </div>
-        <hr id="rec">
-
-        <div class="img">
-            <center><p>foto</p></center>
-        </div>
-        <div class="info">
-            <h3>nama pelamar</h3>
-        <p>bidang keahlian</p>
-        <p>umur </p>
-        <p>jenjang pendidikan</p>
-
-        </div>
-        <hr id="rec">
-        
-       </div>
     </article>
     <?php include 'sidebar.php'; ?>
     <footer>

@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<?php
+session_start();
+include '../database.php';
+$db = new database();
+if(!isset($_SESSION['status'])){
+	header("location:../index.php?pesan=belumlogin");
+}
+ ?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/ss.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Profil - SMKerja</title>
@@ -34,7 +42,7 @@
                     <img src="assets/img/user.jpg" alt="Foto Profil">
                     <?php
                     $username = $_SESSION['username'];
-                    foreach($db->detail_data($username,"pelamar","username") as $x){
+                    foreach($db->detail_data("username","pemberi", $username) as $x){
                     ?>
                     <div>
                         <h2><?php echo $x['nama']; ?></h2>
@@ -66,10 +74,6 @@
                         <label>Alamat</label>
                         <p><?php echo $x['alamat'] ;  echo ", kecamatan "; echo $x['kec'];echo " Kabupaten / Kota "; echo $x['kota']; echo " Provinsi "; echo $x['prov']; ?></p>
                     </div>
-                    <div>
-                        <label>Tanggal Lahir</label>
-                        <p><?php echo $x['ttl']; ?></p>
-                    </div>
 
                     <div>
                         <button type="button" onclick="showEditForm()">Edit Profil</button>
@@ -97,10 +101,6 @@
                     <div>
                         <h5>Nomor Telepon</h5>
                         <input type="tel" name="notelp" value="<?php echo $x['notelp']; ?>">
-                    </div>
-                    <div>
-                        <h5>Tanggal Lahir</h5>
-                        <input type="date" name="ttl" value="<?php echo $x['ttl']; ?>">
                     </div>
                     <h5>Provinsi</h5>
                     <select id="pelamar_provinsi" name="prov" onchange="updateCities('pelamar')">

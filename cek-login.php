@@ -22,7 +22,7 @@ if ($cek > 0) {
 	header("location:pelamar/");
 
 } else if ($db->cek_login($username, $password) == "pemberi") {
-	$_SESSION['nisn'] = $username;
+	$_SESSION['username'] = $username;
 	$_SESSION['status'] = "login";
 	header("location:pemberi/");
 } else {
