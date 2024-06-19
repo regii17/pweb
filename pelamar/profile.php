@@ -42,7 +42,7 @@ if(!isset($_SESSION['status'])){
                     <img src="assets/img/user.jpg" alt="Foto Profil">
                     <?php
                     $username = $_SESSION['username'];
-                    foreach($db->detail_data("pelamar",$username) as $x){
+                    foreach($db->detail_data("username","pelamar", $username) as $x){
                     ?>
                     <div>
                         <h2><?php echo $x['nama']; ?></h2>

@@ -50,11 +50,24 @@ class Database
 	function input_pelamar($username, $nama, $password, $email, $notelp, $ttl, $prov, $kota, $kec, $alamat ){
 		mysqli_query($this->koneksi, "INSERT INTO pelamar VALUES ('$username', '$password', '$nama', '$email', '$notelp', '$prov', '$kota', '$kec', '$alamat', '$ttl')");
 	}
-	function detail_data($table, $pk){
-		$data = mysqli_query($this->koneksi, "SELECT * from $table where username='$pk'");
+	function detail_data($id, $table, $pk){
+		$data = mysqli_query($this->koneksi, "SELECT * from $table where $id='$pk'");
+		if (!$data) {
+			die("Query Error: " . mysqli_error($this->koneksi));
+		}
+		$hasil = [];
 		while ($d = mysqli_fetch_array($data)) {
 			$hasil[] = $d;
 		}
+		return $hasil;
+	}
+	function cari_job($cari){
+		$data = mysqli_query($this->koneksi, "SELECT * from jobs WHERE title LIKE '$cari%' OR category LIKE '$cari%'");
+		while ($d = mysqli_fetch_array($data)) {
+			$hasil[] = $d;
+		}
+
+		return $hasil;
 	}
 
 }
