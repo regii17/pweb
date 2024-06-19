@@ -1,23 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<?php
-session_start();
-include '../database.php';
-$db = new database();
-if(!isset($_SESSION['status'])){
-	header("location:../index.php?pesan=belumlogin");
-}
- ?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/ss.css">
-    <title>Home - SMKerja</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>SMKerja</title>
 </head>
 <body style = "height : 550px">
 <?php include 'nav.php'; ?>
-    <article>
+<article>
         <div class="form">
                 <div class="kotak" id="khome">
                     <center>
@@ -57,7 +49,10 @@ if(!isset($_SESSION['status'])){
          <div class="footer-right">
             <b>Version</b> 0.0.1
          </div>
+
     </footer>
-    <script src="assets/js/script.js"></script>  
+
+    
+    
 </body>
 </html>

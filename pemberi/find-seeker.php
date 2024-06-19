@@ -5,26 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>SMKerja</title>
+    <title>Daftar Pekerjaan - SMKerja</title>
 </head>
 <body>
-    <nav>
-        <img id="logo" src="assets/img/logo.webp" alt="Logo perusahaan">
-        <a href="../index.html">
-        <img class="logout" src="assets/img/exit.png" alt="">
-        </a>
-        <a href="#">
-            <img class="search_btn" src="assets/img/search.png" alt="">
-        </a>
-        <input type="text" class="search" placeholder="Cari Pekerjaan">
-    </nav>
+<?php include 'nav.php'; ?>
     <article style="height: 800px;">
        <div class="form" style="height: 650px;">
         <center><h2>pencari kerja</h2></center>
+        <br>
         <hr ><br><br>
 
         <div class="img">
-            <center><p>foto</p></center>
+            <center><p>fot</p></center>
         </div>
         <div class="info">
             <h3>nama pelamar</h3>
@@ -73,26 +65,7 @@
         
        </div>
     </article>
-    <aside>
-        <br><br>
-        <a href="home.html">
-            <img src="assets/img/home.png" alt="">
-            <p>Beranda</p><br>
-        </a>
-        <a href="share-job.html">
-            <img src="assets/img/find_job.png" alt="">
-            <p>Beri Pekerjaan</p><br>
-        </a>
-        <a href="#">
-            <img src="assets/img/give_job.png" alt="" srcset="">
-            <p>Pencari Kerja</p><br>
-        </a>
-        <a href="history.html">
-            <img src="assets/img/riwayat.png" alt="">
-            <p>Riwayat </p>
-        </a>
-
-    </aside>
+    <?php include 'sidebar.php'; ?>
     <footer>
         <br>
         <strong>Copyright &copy; 2023-2024 <a href="#">Regii</a>.</strong>
@@ -100,7 +73,7 @@
          <div class="footer-right">
             <b>Version</b> 0.0.1
          </div>
-
+         <?php include 'nav.php'; ?>
     </footer>
 
     

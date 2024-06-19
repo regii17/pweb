@@ -8,31 +8,24 @@
     <title>SMKerja</title>
 </head>
 <body>
-    <nav>
-        <img id="logo" src="assets/img/logo.webp" alt="Logo perusahaan">
-        <a href="../index.html">
-        <img class="logout" src="assets/img/exit.png" alt="">
-        </a>
-        <a href="#">
-            <img class="search_btn" src="assets/img/search.png" alt="">
-        </a>
-        <input type="text" class="search" placeholder="Cari Pekerjaan">
-    </nav>
+<?php include 'nav.php'; ?>
     <article>
         <div class="form">
             <center>
                 <h2>kirim Pekerjaan</h2><br>
                 <hr>
             </center>
-
+            <br>
             <div class="text">
-                <p>nama pekerjaan       :</p>
-                <p>nama perusahaan      :</p>
-                <p>persyaratan          :</p>
-                <p>fasilitas            :</p>
-                <p>alamat perusahaan    :</p>
-                <p>gaji                 :</p>
-                <p>contac               :</p>
+                <b>
+                    <p>nama pekerjaan       :</p>
+                    <p>nama perusahaan      :</p>
+                    <p>persyaratan          :</p>
+                    <p>fasilitas            :</p>
+                    <p>alamat perusahaan    :</p>
+                    <p>gaji                 :</p>
+                    <p>contac               :</p>
+                </b>
             </div>
             <div class="input">
                 <input type="text" name="" id=""><br>
@@ -47,32 +40,9 @@
                 <button id="kirim">kirim</button>
                 <button id="reset">reset</button>
             </div>
-            
-            
-
-
         </div>
     </article>
-    <aside>
-        <br><br>
-        <a href="home.html">
-            <img src="assets/img/home.png" alt="">
-            <p>Beranda</p><br>
-        </a>
-        <a href="#">
-            <img src="assets/img/find_job.png" alt="">
-            <p>Beri Pekerjaan</p><br>
-        </a>
-        <a href="find-seeker.html">
-            <img src="assets/img/give_job.png" alt="" srcset="">
-            <p>Pencari Kerja</p><br>
-        </a>
-        <a href="history.html">
-            <img src="assets/img/riwayat.png" alt="">
-            <p>Riwayat </p>
-        </a>
-
-    </aside>
+    <?php include 'sidebar.php'; ?>
     <footer>
         <br>
         <strong>Copyright &copy; 2023-2024 <a href="#">Regii</a>.</strong>
