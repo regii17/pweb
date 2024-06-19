@@ -1,6 +1,9 @@
 <?php 
 require_once 'database.php';
 $db = new Database();
+if ($db->koneksi->connect_error) {
+    die("Connection failed: " . $db->koneksi->connect_error);
+}
 if(!isset($_POST['aksi'])){
 	$aksi = $_GET['aksi'];
 	if(isset($_GET['table'])){
@@ -9,11 +12,6 @@ if(!isset($_POST['aksi'])){
 }else{
 	$aksi = $_POST['aksi'];
 } 
-
-if ($db->koneksi->connect_error) {
-    die("Connection failed: " . $db->koneksi->connect_error);
-}
-else{
     if($aksi == "update_pelamar"){
         $db->update_pelamar(
             $_POST['username'],
@@ -44,5 +42,5 @@ else{
         header("location:login.php?pesan=berhasilregister");
     }
 
-}
+
 

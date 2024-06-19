@@ -34,7 +34,7 @@ nav .logout img {
     margin-right: 20px;
 }
 
-.search_box {
+#search .search_box {
     display: flex;
     align-items: center;
     background-color: #fff;
@@ -43,7 +43,7 @@ nav .logout img {
     border: 1px solid rgba(99, 99, 99, 0.548);
 }
 
-.search_box .search {
+#search .search_box .search {
     height: 45px;
     width: 95%;
     border: none;
@@ -53,7 +53,7 @@ nav .logout img {
     border-radius: 9px 0 0 9px;
 }
 
-.search_box .search_btn {
+#search .search_box .search_btn {
     background-color: rgba(95, 95, 95, 0.753);
     border: none;
     cursor: pointer;
@@ -62,7 +62,7 @@ nav .logout img {
     border-radius: 0px 9px 9px 0px;
 }
 
-.search_box .search_img {
+#search .search_box .search_img {
     width: 25px;
     height: 25px;
 }

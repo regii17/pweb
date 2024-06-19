@@ -45,11 +45,10 @@ nav .logout img {
 
 .search_box .search {
     height: 45px;
-    width: 95%;
+    width: 810px;
     border: none;
     outline: none;
     font-size: 16px;
-    padding-left: 10px;
     border-radius: 9px 0 0 9px;
 }
 
@@ -60,6 +59,8 @@ nav .logout img {
     height: 60px;
     width: 100px;
     border-radius: 0px 9px 9px 0px;
+    float: right;
+    margin-right: -109px;
 }
 
 .search_box .search_img {
@@ -214,6 +215,7 @@ footer {
     font-family: 'Courier New', Courier, monospace;
     font-size: small;
     float: inline-end;
+    margin-top: 50px;
 }
 
 footer strong {

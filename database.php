@@ -61,6 +61,14 @@ class Database
 		}
 		return $hasil;
 	}
+	function cari_job($cari){
+		$data = mysqli_query($this->koneksi, "SELECT * from jobs WHERE title LIKE '$cari%' OR category LIKE '$cari%'");
+		while ($d = mysqli_fetch_array($data)) {
+			$hasil[] = $d;
+		}
+
+		return $hasil;
+	}
 
 }
 ?>
