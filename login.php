@@ -13,12 +13,12 @@
 <?php
 
 if (isset($_GET['pesan'])) {
-    if ($_GET['pesan'] == "logout") {
+    if ($_GET['pesan'] == "berhasilregister") {
         echo"<script>
         Swal.fire({
             icon: 'success',
-            title: 'Berhasi logout',
-            text: 'Anda telah berhasil logout dari sistem.',
+            title: 'Berhasi Registrasi Akun',
+            text: 'Anda telah berhasil registrasi akun, silahkan login.',
         });</script>
         ";
     } else if ($_GET['pesan'] == "gagal") {
@@ -29,12 +29,6 @@ if (isset($_GET['pesan'])) {
             text: 'Silakan coba lagi dengan username dan password yang benar.',
         });</script>
         ";
-    } else if ($_GET['pesan'] == "belumlogin") {
-        echo '<div class="alert alert-warning alert-dismissible">
-        <a href="index.php"><button type="button" class="close">×</button></a>
-        <h5><i class="icon fas fa-exclamation-triangle"></i> Gagal!</h5>
-        Anda harus login terlebih dahulu!
-        </div>';
     }
 }
 ?>

@@ -12,7 +12,7 @@ if(!isset($_SESSION['status'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/ss.css">
+    <link rel="stylesheet" href="assets/css/sty.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Profil - SMKerja</title>
@@ -37,13 +37,13 @@ if(!isset($_SESSION['status'])){
     }
     ?>
         <div class="form">
-            <section class="profile-container">
-                <div class="profile-header">
-                    <img src="assets/img/user.jpg" alt="Foto Profil">
-                    <?php
+        <?php
                     $username = $_SESSION['username'];
                     foreach($db->detail_data("username","pelamar", $username) as $x){
                     ?>
+            <section class="profile-container">
+                <div class="profile-header">
+                    <img src="assets/img/user.jpg" alt="Foto Profil">
                     <div>
                         <h2><?php echo $x['nama']; ?></h2>
                         <p><?php echo $x['email']; ?></p>
@@ -81,6 +81,7 @@ if(!isset($_SESSION['status'])){
 
                     <div>
                         <button type="button" onclick="showEditForm()">Edit Profil</button>
+                        <button type="button" onclick="window.location.href='view-cv.php?pesan=edit'">CV Anda</button>
                     </div>
                 </div>
 

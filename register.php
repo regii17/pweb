@@ -50,12 +50,12 @@
                 <h5>Alamat spesifik</h5>
                 <input type="text" name="pelamar_alamat" placeholder="Jalan..">
                 <h5>Foto Profil</h5>
-                <input type="file" name="pelamar_foto" accept="image/*">
+                <input type="file" name="pelamar_foto">
 
                 <button type = "submit">REGISTER</button>
             </form>
 
-            <form id="pemberiForm" style="display: none;">
+            <form id="pemberiForm" action="proses.php?aksi=pemberiregister" style="display: none;" method="post">
                 <h5>Nama Lengkap</h5>
                 <input type="text" name="pemberi_nama" placeholder="Nama">
                 <h5>Username</h5>
@@ -65,21 +65,24 @@
                 <h5>Email</h5>
                 <input type="email" name="pemberi_email" placeholder="Email">
                 <h5>Provinsi</h5>
-                <select id="pemberi_provinsi" onchange="updateCities('pemberi')">
+                <select id="pemberi_provinsi" name="pemberi_provinsi" onchange="updateCities('pemberi')">
                 <option value="">Pilih Provinsi...</option>
                 </select>
                 <h5>Kota</h5>
-                <select id="pemberi_kota" onchange="updateDistricts('pemberi')">
+                <select id="pemberi_kota" name="pemberi_kota" onchange="updateDistricts('pemberi')">
                 <option value="">Pilih Kota...</option>
                 </select>
                 <h5>Kecamatan</h5>
-                <select id="pemberi_kecamatan">
+                <select id="pemberi_kecamatan" name="pemberi_kecamatan">
                 <option value="">Pilih Kecamatan...</option>
                 </select>
                 <h5>Alamat spesifik</h5>
                 <input type="text" name="pemberi_alamat" placeholder="Jalan...">
                 <h5>Asal Perusahaan</h5>
                 <input type="text" name="pemberi_perusahaan" placeholder="Asal Perusahaan">
+                <h5>Foto Profil</h5>
+                <input type="file" name="pemberi_foto">
+
                 <button type = "submit">REGISTER</button>
             </form>
 

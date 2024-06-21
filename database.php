@@ -50,12 +50,14 @@ class Database
 	function input_pelamar($username, $nama, $password, $email, $notelp, $ttl, $prov, $kota, $kec, $alamat ){
 		mysqli_query($this->koneksi, "INSERT INTO pelamar VALUES ('$username', '$password', '$nama', '$email', '$notelp', '$prov', '$kota', '$kec', '$alamat', '$ttl')");
 	}
+	function input_pemberi($username, $password, $nama, $prov, $kota, $kec, $alamat, $perusahaan, $email){
+		mysqli_query($this->koneksi, "INSERT INTO pemberi VALUES ('$username', '$password', '$nama', '$prov', '$kota', '$kec', '$alamat', '$perusahaan', '$email')");
+	}
+	function input_job($namapk, $jenis, $namapr, $persyaratan, $fasilitas, $prov, $kota, $kec, $alamat, $gaji, $kontak){
+		mysqli_query($this->koneksi, "INSERT INTO jobs_f VALUES ('','$namapk', '$jenis', '$namapr', '$persyaratan', '$fasilitas', '$prov', '$kota', '$kec', '$alamat', '$gaji', '$kontak')");
+	}
 	function detail_data($id, $table, $pk){
 		$data = mysqli_query($this->koneksi, "SELECT * from $table where $id='$pk'");
-		if (!$data) {
-			die("Query Error: " . mysqli_error($this->koneksi));
-		}
-		$hasil = [];
 		while ($d = mysqli_fetch_array($data)) {
 			$hasil[] = $d;
 		}
@@ -63,6 +65,7 @@ class Database
 	}
 	function cari_job($cari){
 		$data = mysqli_query($this->koneksi, "SELECT * from jobs WHERE title LIKE '$cari%' OR category LIKE '$cari%'");
+		$hasil = [];
 		while ($d = mysqli_fetch_array($data)) {
 			$hasil[] = $d;
 		}

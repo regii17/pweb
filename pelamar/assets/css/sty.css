@@ -34,7 +34,7 @@ nav .logout img {
     margin-right: 20px;
 }
 
-#search .search_box {
+.search_box {
     display: flex;
     align-items: center;
     background-color: #fff;
@@ -43,26 +43,27 @@ nav .logout img {
     border: 1px solid rgba(99, 99, 99, 0.548);
 }
 
-#search .search_box .search {
+.search_box .search {
     height: 45px;
-    width: 95%;
+    width: 810px;
     border: none;
     outline: none;
     font-size: 16px;
-    padding-left: 10px;
     border-radius: 9px 0 0 9px;
 }
 
-#search .search_box .search_btn {
+.search_box .search_btn {
     background-color: rgba(95, 95, 95, 0.753);
     border: none;
     cursor: pointer;
     height: 60px;
     width: 100px;
     border-radius: 0px 9px 9px 0px;
+    float: right;
+    margin-right: -109px;
 }
 
-#search .search_box .search_img {
+.search_box .search_img {
     width: 25px;
     height: 25px;
 }
@@ -228,7 +229,9 @@ footer .footer-right {
 
 .form {
     width: 1000px;
+    min-height: 400px;
     height: 90%;
+    border-radius: 8px;
     background-color: rgb(184, 184, 184);
     margin-top: 40px;
     margin-left: 30px;
@@ -401,6 +404,7 @@ footer .footer-right {
 .edit-profile-form div {
     margin-bottom: 15px;
 }
+
 .form input, .form select {
 width: 100%;
 padding: 10px;
@@ -498,4 +502,58 @@ font-size: 14px;
 
 .chat-input button:hover {
     background-color: #2d4373;
+}
+
+.job-img {
+    width: 30%;
+    padding: 20px;
+}
+
+.job-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the job details */
+.job-detail {
+    width: 65%;
+    margin-left: 32%;
+    margin-top: -39%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.job-detail h1 {
+    margin-top: 0;
+    font-size: 2em;
+    color: #333;
+    margin-left: 30px;
+}
+
+.job-detail p {
+    line-height: 1.6;
+    color: #555;
+}
+
+.job-detail p strong {
+    color: #000;
+}
+
+.apply-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.apply-btn:hover {
+    background-color: #0056b3;
 }

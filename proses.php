@@ -41,6 +41,36 @@ if(!isset($_POST['aksi'])){
         );
         header("location:login.php?pesan=berhasilregister");
     }
+    else if($aksi == "pemberiregister"){
+        $db->input_pemberi(
+            $_POST['pemberi_username'],
+            $_POST['pemberi_password'],
+            $_POST['pemberi_nama'],
+            $_POST['pemberi_provisi'],
+            $_POST['pemberi_kota'],
+            $_POST['pemberi_kecamatan'],
+            $_POST['pemberi_alamat'],
+            $_POST['pemberi_perusahaan'],
+            $_POST['pemberi_email']
+        );
+        header("location:login.php?pesan=berhasilregister");
+    }
+    else if($aksi == "add_job"){
+        $db->input_job(
+            $_POST['nama-pekerjaan'],
+            $_POST['jenis-pekerjaan'],
+            $_POST['nama-perusahaan'],
+            $_POST['persyaratan'],
+            $_POST['fasilitas'],
+            $_POST['perusahaan_provisi'],
+            $_POST['perusahaan_kota'],
+            $_POST['perusahaan_kecamatan'],
+            $_POST['alamat-perusahaan'],
+            $_POST['gaji'],
+            $_POST['kontak-perusahaan'],
+        );
+        header("location:pemberi/share-job.php?pesan=success");
+    }
 
 
 

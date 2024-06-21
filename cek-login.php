@@ -19,7 +19,7 @@ if ($cek > 0) {
 
 	$_SESSION['username'] = $username;
 	$_SESSION['status'] = "login";
-	header("location:pelamar/");
+	header("location:pelamar/view-cv.php?pesan=welcome");
 
 } else if ($db->cek_login($username, $password) == "pemberi") {
 	$_SESSION['username'] = $username;
