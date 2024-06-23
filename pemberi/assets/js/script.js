@@ -20,7 +20,8 @@ const districts = {
 document.addEventListener("DOMContentLoaded", () => {
     const provinceSelects = 
     document.querySelectorAll("select[id$='_provinsi']");
-    provinceSelects.forEach(select => {select.innerHTML = Object.keys(provinces).map(province => `<option value="${province}">${province}</option>`).join('');
+    provinceSelects.forEach(select => {
+        select.innerHTML = Object.keys(provinces).map(province => `<option value="${province}">${province}</option>`).join('');
     });
 });
 
@@ -45,4 +46,13 @@ function updateDistricts(role) {
     } else {
         districtSelect.innerHTML = '<option value="">Pilih Kecamatan...</option>';
     }
+}
+function showEditForm() {
+    document.querySelector('.profile-body').style.display = 'none';
+    document.querySelector('.edit-profile-form').style.display = 'block';
+    document.body.style.height = "1530px";
+}
+function hideEditForm() {
+    document.querySelector('.profile-body').style.display = 'block';
+    document.querySelector('.edit-profile-form').style.display = 'none';
 }

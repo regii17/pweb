@@ -67,8 +67,8 @@ if(!isset($_SESSION['status'])){
                         <p><?php echo $x['email']; ?></p>
                     </div>
                     <div>
-                        <label>Nomor Telepon</label>
-                        <p><?php echo $x['notelp']; ?></p>
+                        <label>Perusahaan</label>
+                        <p><?php echo $x['perusahaan']; ?></p>
                     </div>
                     <div>
                         <label>Alamat</label>
@@ -99,19 +99,19 @@ if(!isset($_SESSION['status'])){
                         <input type="email" name="email" value="<?php echo $x['email']; ?>">
                     </div>
                     <div>
-                        <h5>Nomor Telepon</h5>
-                        <input type="tel" name="notelp" value="<?php echo $x['notelp']; ?>">
+                        <h5>Perusahaan</h5>
+                        <input type="text" name="perusahaan" value="<?php echo $x['perusahaan']; ?>" disabled>
                     </div>
                     <h5>Provinsi</h5>
-                    <select id="pelamar_provinsi" name="prov" onchange="updateCities('pelamar')">
+                    <select id="pemberi_provinsi" name="prov" onchange="updateCities('pemberi')">
                     <option value="<?php echo $x['prov']; ?>"><?php echo $x['prov']; ?></option>
                     </select>
                     <h5>Kota</h5>
-                    <select id="pelamar_kota" name="kota" onchange="updateDistricts('pelamar')">
+                    <select id="pemberi_kota" name="kota" onchange="updateDistricts('pemberi')">
                     <option value="<?php echo $x['kota']; ?>"><?php echo $x['kota']; ?></option>
                     </select>
                     <h5>Kecamatan</h5>
-                    <select id="pelamar_kecamatan" name="kec">
+                    <select id="pemberi_kecamatan" name="kec">
                     <option value="<?php echo $x['kec']; ?>"><?php echo $x['kec']; ?></option>
                     </select>
                     <div>
@@ -119,7 +119,7 @@ if(!isset($_SESSION['status'])){
                         <input type="text" name="alamat" value="<?php echo $x['alamat']; ?>">
                     </div>
                     <div>
-                        <button type="submit" name="aksi" value="update_pelamar">Simpan Perubahan</button>
+                        <button type="submit" name="aksi" value="update_pemberi">Simpan Perubahan</button>
                         <button type="button" onclick="hideEditForm()">Batal</button>
                     </div>
                     <?php } ?>
@@ -136,7 +136,7 @@ if(!isset($_SESSION['status'])){
             <b>Version</b> 0.0.1
         </div>
     </footer>
-    <script src="assets/js/scr.js"></script>
+    <script src="assets/js/script.js"></script>
 
 </body>
 </html>

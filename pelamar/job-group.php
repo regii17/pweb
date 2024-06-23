@@ -14,6 +14,11 @@ if(!isset($_SESSION['status'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/sty.css">
     <title>Daftar Pekerjaan - SMKerja</title>
+    <style>
+        p{
+            text-align: left;
+        }
+        </style>
 </head>
 <body>
 <?php include 'nav.php'; ?>
@@ -30,37 +35,24 @@ if(!isset($_SESSION['status'])){
             <br><br><br>
             <div class="job" id="jobContainer">
             <?php
-                if(isset($_GET['cari'])){
-                    $cari = $_GET['cari'];
-                    $hasil = $db->cari_job($cari);
-                    if (empty($hasil)) {
-                        echo "<i><h4>Pencarian tidak ditemukan.</h4></i>";
-                    } else {
-                        foreach($hasil as $d){
-                        ?>
-                    <div class="kotak">
-                    <h2><?php echo $d['title']; ?></h2>
-                    <p><?php echo $d['description']; ?></p>
-                    <div class="bawah">
-                        <a href="job-group.php?id=<?php echo $d['id']; ?>">View Details</a>
-                    </div>
-                </div>
-                <?php
-                    }};        
-                }else{
-                    foreach($db->tampil_data("jobs","id") as $d){
-                        ?>
-                    <div class="kotak">
-                    <h2><?php echo $d['title']; ?></h2>
-                    <p><?php echo $d['description']; ?></p>
-                    <div class="bawah">
-                        <a href="job-group.php?id=<?php echo $d['id']; ?>">View Details</a>
-                    </div>
-                </div>
-                <?php
-                    };
-                }
+            if (isset($_GET['id'])) {
+                $id = $_GET['id'];
+                
+                foreach($db->detail_data("jenis_pekerjaan","jobs_f", $id) as $d){
             ?>
+                    <div class="kotak">
+                    <h2><?php echo $d['nama_pekerjaan']; ?></h2>
+                    
+                    <p>Nama perusahaan : <?php echo $d['nama_perusahaan']; ?></p>
+                    <p>Gaji &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; :<?php echo $d['gaji']; ?></p><br>
+                    <p>Alamat : <br><?php echo $d['alamat_perusahaan'] ;  echo ", kecamatan "; echo $d['kec_perusahaan'];echo " Kabupaten / Kota "; echo $d['kota_perusahaan']; echo " Provinsi "; echo $d['prov_perusahaan']; ?></p>
+                    <div class="bawah">
+                        <a href="job-detail.php?id=<?php echo $d['id']; ?>">View Details</a>
+                    </div>
+                    </div>
+
+                    <?php }} ?>
+                </div>
             </div>
         </div>
     </article>

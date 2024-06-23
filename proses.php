@@ -55,6 +55,20 @@ if(!isset($_POST['aksi'])){
         );
         header("location:login.php?pesan=berhasilregister");
     }
+    else if($aksi == "update_pemberi"){
+        $db->update_pemberi(
+            $_POST['username'],
+            $_POST['nama'],
+            $_POST['password'],
+            $_POST['email'],
+            $_POST['perusahaan'],
+            $_POST['ttl'],
+            $_POST['prov'],
+            $_POST['kota'],
+            $_POST['kec'],
+            $_POST['alamat']);
+            header("location:pemberi/profile.php?pesan=updateberhasil");
+    }
     else if($aksi == "add_job"){
         $db->input_job(
             $_POST['nama-pekerjaan'],
@@ -71,6 +85,7 @@ if(!isset($_POST['aksi'])){
         );
         header("location:pemberi/share-job.php?pesan=success");
     }
+
 
 
 

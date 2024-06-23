@@ -23,13 +23,13 @@ if(isset($_GET['id'])){
 <?php include 'nav.php'; ?>
     <article>
         <div class="form" style="height: 500px;">
-                <?php foreach($db->detail_data("id", "jobs", $job_id) as $d){ ?>
+                <?php foreach($db->detail_data("id", "jobs_f", $job_id) as $d){ ?>
                 <div class="job-img">
                     <img src="assets/img/job.png" alt="" srcset="">
                 </div>
                 <div class="job-detail">
-                    <h1><?php echo $d['title']; ?></h1>
-                    <p><?php echo $d['description']; ?></p>
+                    <h1><?php echo $d['nama_pekerjaan']; ?></h1>
+                    <p><?php echo $d['nama_perusahaan']; ?></p>
                     <p><strong>Alamat :</strong> <?php echo $d['alamat'] ;  echo ", kecamatan "; echo $d['kec'];echo " Kabupaten / Kota "; echo $d['kota']; echo " Provinsi "; echo $d['prov']; ?></p>
                     <p><strong>Gaji:</strong> <?php echo $d['gaji']; ?></p>
                     <a href="upload-cv.php" class="apply-btn">Ajukan lamaran pekerjaan</a>

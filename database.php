@@ -53,6 +53,9 @@ class Database
 	function input_pemberi($username, $password, $nama, $prov, $kota, $kec, $alamat, $perusahaan, $email){
 		mysqli_query($this->koneksi, "INSERT INTO pemberi VALUES ('$username', '$password', '$nama', '$prov', '$kota', '$kec', '$alamat', '$perusahaan', '$email')");
 	}
+	function update_pemberi($username, $nama, $password, $email, $perusahaan, $ttl, $prov, $kota, $kec, $alamat ){
+		mysqli_query($this->koneksi, "UPDATE pemberi SET username='$username', password='$password', nama='$nama', email='$email', perusahaan='$perusahaan', prov='$prov', kota='$kota', kec='$kec', alamat='$alamat', ttl='$ttl' WHERE username='$username'");
+	}
 	function input_job($namapk, $jenis, $namapr, $persyaratan, $fasilitas, $prov, $kota, $kec, $alamat, $gaji, $kontak){
 		mysqli_query($this->koneksi, "INSERT INTO jobs_f VALUES ('','$namapk', '$jenis', '$namapr', '$persyaratan', '$fasilitas', '$prov', '$kota', '$kec', '$alamat', '$gaji', '$kontak')");
 	}
